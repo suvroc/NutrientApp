@@ -1,0 +1,13 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "types" : [ "jasmine", "lodash" ],
+    "outFile": ".tmp/serve/app/index.module.js"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

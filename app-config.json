@@ -1,0 +1,8 @@
+{
+  "baseUrl": "http://localhost:15621",
+  "loggingEnabled" : true,
+  "environment": "localhost",
+  "branch": "dev",
+  "releaseNumber": "0.0.1",
+  "machineName": "PLWAW0000"
+}
