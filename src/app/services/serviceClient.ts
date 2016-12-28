@@ -55,7 +55,7 @@ module Sample {
             private $http: angular.IHttpService
         ) {
             this.hostName = 'localhost:51790';
-            this.scheme = ''http'';
+            this.scheme = 'http';
             this.baseUri = this.scheme + '://' + this.hostName ;
         }
     
@@ -152,7 +152,7 @@ module Sample {
             return this.$http(httpRequestParams);
         }
     
-        /** 
+        /**
         * 
         * @return { any } 
         */

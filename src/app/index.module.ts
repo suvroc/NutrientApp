@@ -2,7 +2,6 @@ import { basicConfig, GlobalConfig } from './index.config';
 import { routerConfig } from './index.route';
 import { locationConfig } from './index.location';
 import { ComponentLibrary } from './components';
-import { ApiServices } from './services/';
 
 import { Hello } from './hello';
 /** @plopInject[import] -- DO NOT REMOVE THIS COMMENT! */
@@ -23,7 +22,7 @@ module app {
     .config(locationConfig)
     .constant('appConfig', GlobalConfig.appConfig);
 
-  ApiServices.bootstrap(GlobalConfig.moduleName, GlobalConfig.appConfig.baseUrl);
+  //ApiServices.bootstrap(GlobalConfig.moduleName, GlobalConfig.appConfig.baseUrl);
 
   ComponentLibrary.bootstrap();
 

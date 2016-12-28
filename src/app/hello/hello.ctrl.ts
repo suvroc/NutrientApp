@@ -1,11 +1,10 @@
-import { CountryViewModel, SampleCountryService } from '../services/';
 import { GlobalConfig } from '../index.config';
 
 export class HelloController {
   public version: String;
 
   /* @ngInject */
-  constructor(SampleCountryService: SampleCountryService) {
+  constructor() {
     this.version = "0.1";
   }
 }
