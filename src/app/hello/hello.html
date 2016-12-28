@@ -1,11 +1,35 @@
 <article class="content">
-	<h1>Hello!</h1>
+	<h1>Choose food:</h1>
+<md-content>
+	<md-autocomplete
+          md-selected-item="vm.selectedItem"
+          md-search-text="vm.searchText"
+          md-selected-item-change="vm.selectedItemChange(item)"
+          md-items="item in vm.querySearch(vm.searchText)"
+          md-min-length="3"
+          placeholder="Find a food"
+		  md-item-text="item.Name">
+        <md-item-template>
+          <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.Name}}</span>
+        </md-item-template>
+        <md-not-found>
+          No states matching "{{ctrl.searchText}}" were found.
+          <!--<a ng-click="ctrl.newState(ctrl.searchText)">Create a new one!</a>-->
+        </md-not-found>
+      </md-autocomplete>
 
-	<div>
-		<b>Version</b> {{vm.version}}
-	</div>
 
-	<ul>
-		<li ng-repeat="food in vm.foods">{{food.Name}}</li>
-	</ul>
+	  <md-list flex style="width:100%">
+		<md-subheader class="md-no-sticky">Nutrients data (per 100 g)</md-subheader>
+        <md-list-item class="md-3-line" ng-repeat="item in vm.foodInfo.Nutrients" ng-click="null">
+          
+          <div class="md-list-item-text" layout="column">
+            <h3>{{ item.Name }}</h3>
+			<h3 class="md-secondary">{{ item.Value }} {{ item.Units }}</h3>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </div>
+
 </article>

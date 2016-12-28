@@ -48,7 +48,8 @@ export class GlobalConfig {
   public static appConfig: ConfigTemplate;
 
   public static dependencies: Array<string> = [
-    'templates', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'pascalprecht.translate'
+    'templates', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'pascalprecht.translate',
+    'ngMaterial'
   ];
 
   public static jasmineDeps() {
