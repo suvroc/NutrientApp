@@ -59,6 +59,7 @@
     "gulp-size": "2.1.0",
     "gulp-sourcemaps": "1.7.3",
     "gulp-stylelint": "3.7.0",
+    "gulp-swagger": "^1.0.1",
     "gulp-swagger-generator": "^0.1.1",
     "gulp-task-listing": "1.0.1",
     "gulp-tslint": "7.0.1",

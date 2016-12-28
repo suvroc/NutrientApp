@@ -1,11 +1,16 @@
+import { Sample} from './../services/serviceClient';
 import { GlobalConfig } from '../index.config';
 
 export class HelloController {
   public version: String;
+  public foods: Sample.Food[];
 
   /* @ngInject */
-  constructor() {
+  constructor(private ServiceClient: Sample.ServiceClient) {
     this.version = "0.1";
+
+    this.ServiceClient.getFoodSearchBySearchText('corn')
+      .then(x => this.foods = x.data);
   }
 }
 

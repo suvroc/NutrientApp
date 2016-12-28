@@ -1,3 +1,4 @@
+import { Sample } from './services/serviceClient';
 import { basicConfig, GlobalConfig } from './index.config';
 import { routerConfig } from './index.route';
 import { locationConfig } from './index.location';
@@ -20,7 +21,8 @@ module app {
     .config(basicConfig)
     .config(routerConfig)
     .config(locationConfig)
-    .constant('appConfig', GlobalConfig.appConfig);
+    .constant('appConfig', GlobalConfig.appConfig)
+    .service('ServiceClient', Sample.ServiceClient);
 
   //ApiServices.bootstrap(GlobalConfig.moduleName, GlobalConfig.appConfig.baseUrl);
 

@@ -1,4 +1,4 @@
-module Sample {
+export module Sample {
     "use strict";
     
     /*Food*/
