@@ -9,7 +9,8 @@ var conf = require('./conf');
 
 var tsLinterSrc = [
   path.join(conf.paths.src, '**/*.ts'),
-  '!' + path.join(conf.paths.src, '**/*.d.ts')
+  '!' + path.join(conf.paths.src, '**/*.d.ts'),
+  '!' + path.join(conf.paths.src, 'app/services/*.ts')
 ];
 
 
