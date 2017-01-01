@@ -54,9 +54,10 @@ export module Sample {
         constructor(
             private $http: angular.IHttpService
         ) {
-            this.hostName = 'localhost:51790';
-            this.scheme = 'http';
+            this.hostName = 'nutrientswebapi20161229020551.azurewebsites.net';
+            this.scheme = 'https';
             this.baseUri = this.scheme + '://' + this.hostName ;
+            debugger;
         }
     
         /**
