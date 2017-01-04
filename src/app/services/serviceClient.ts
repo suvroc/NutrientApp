@@ -41,6 +41,23 @@ export module Sample {
         /**/
         Value : number;
     
+        /**/
+        Units : string;
+    
+    }
+    
+    /*FoodWeight*/
+    export interface FoodWeight  {
+    
+        /**/
+        Description : string;
+    
+        /**/
+        Amount : number;
+    
+        /**/
+        GramWeight : number;
+    
     }
 
 
@@ -55,9 +72,10 @@ export module Sample {
             private $http: angular.IHttpService
         ) {
             this.hostName = 'nutrientswebapi20161229020551.azurewebsites.net';
-            this.scheme = 'https';
+            this.scheme = 'http';
+            // this.hostName = 'localhost:51790';
+            // this.scheme = 'http';
             this.baseUri = this.scheme + '://' + this.hostName ;
-            debugger;
         }
     
         /**
@@ -133,6 +151,37 @@ export module Sample {
         ) : angular.IHttpPromise<FoodInfo> {
     
             var uri = this.baseUri + '/Food/Id/' + String(id);
+    
+            var httpRequestParams: any = {
+                method: 'GET',
+                url: uri,
+                json: true,
+                params: {
+                },
+                headers: {
+                }
+            };
+    
+    
+            if (canceller){
+                httpRequestParams.timeout = canceller.promise;
+            }
+    
+    
+            return this.$http(httpRequestParams);
+        }
+    
+        /**
+        * 
+        * @param { number } foodId 
+        * @return { any } 
+        */
+        getFoodByFoodIdWeight(
+                foodId: number,
+            canceller?: angular.IDeferred<any>
+        ) : angular.IHttpPromise<FoodWeight[]> {
+    
+            var uri = this.baseUri + '/Food/' + String(foodId) + '/Weight';
     
             var httpRequestParams: any = {
                 method: 'GET',

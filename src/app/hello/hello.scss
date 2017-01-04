@@ -6,4 +6,37 @@
   h1 {
     color: gray;
   }
+
+  .searchRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+
+    .foodSelect {
+      order: 0;
+    flex: 0 1 70%;
+    align-self: auto;
+    }
+
+    .amountSelect {
+       order: 0;
+    flex: 0 1 10%;
+    align-self: auto;
+    }
+
+
+
+    .weightSelect {
+      order: 0;
+    flex: 0 1 20%;
+    align-self: auto;
+    }
+
+    md-list {
+      flex: 0 1 100%;
+    }
+  }
 }
